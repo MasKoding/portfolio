@@ -4,17 +4,32 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
-:root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
-}
+ :root {
+	--color-bg: #f2f2f2;
+	--color-text: #444444;
+	--bold-text: #222;
+	--nav-text: #000000;
+	--code: #f2f2f2;
+	--block-quote-border: #999;
+	--block-quote-text: #222;
+	--slider-bg: #dddddd;
+	--slider-bg-before: #fff;
+	--slider-input-bg: #8758ff;
+  }
+  
+  [data-theme="light"] {
+	--color-bg: #f2f2f2;
+	--color-text: #444444;
+	--bold-text: #222;
+	--nav-text: #000000;
+	--code: #f2f2f2;
+	--block-quote-border: #999;
+	--block-quote-text: #222;
+	--slider-bg: #dddddd;
+	--slider-bg-before: #fff;
+	--slider-input-bg: #8758ff;
+  }
+  
 @font-face {
 	font-family: 'Atkinson';
 	src: url('/fonts/atkinson-regular.woff') format('woff');
@@ -29,7 +44,7 @@
 	font-style: normal;
 	font-display: swap;
 }
-body {
+ body {
 	font-family: 'Atkinson', sans-serif;
 	margin: 0;
 	padding: 0;
@@ -42,6 +57,32 @@ body {
 	font-size: 20px;
 	line-height: 1.7;
 }
+nav{
+	background-color: #fff!important;
+	color: #000!important;
+}
+
+[data-theme="dark"] body , [data-theme="dark"] header,[data-theme="dark"] nav{
+	--color-bg: #150119;
+	--color-text: #dddddd;
+	--bold-text: #eeeeee;
+	--nav-text: #dddddd;
+	--code: #f2f2f2;
+	--block-quote-border: #8e32dc;
+	--block-quote-text: #dddddd;
+
+	font-family: 'Atkinson', sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	background:var(--color-bg)!important;
+	background-size: 100% 600px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	color: var(--color-text)!important;
+	font-size: 20px;
+	line-height: 1.7;
+  }
 main {
 	width: 720px;
 	max-width: calc(100% - 2em);
@@ -152,3 +193,94 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
+
+
+html.dark {
+	background-color: #0d0950;
+	color: #fff;
+  }
+  
+  .dark .nav-links a {
+	color: #fff;
+  }
+
+  /* TOGGLE  */
+.theme-switch-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+  }
+  
+  .theme-switch {
+	display: inline-block;
+	height: 34px;
+	position: relative;
+	width: 60px;
+  }
+  
+  .theme-switch input {
+	display: none;
+  }
+  
+  .slider {
+	background-color: var(--slider-bg);
+	bottom: 0;
+	cursor: pointer;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: 0.4s;
+	border-radius: 34px;
+  }
+  
+  .slider:before {
+	background-color: var(--slider-bg-before);
+	bottom: 4px;
+	content: "";
+	height: 26px;
+	left: 4px;
+	position: absolute;
+	transition: 0.4s;
+	width: 26px;
+	border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+	background-color: var(--slider-input-bg);
+  }
+  
+  input:checked + .slider:before {
+	transform: translateX(26px);
+  }
+  
+  .slider svg {
+	color: #222;
+	position: absolute;
+	transition: opacity 0.2s ease 0s, transform 0.35s ease 0s;
+	pointer-events: none;
+  }
+  
+  .feather-moon {
+	opacity: 0;
+	left: 9px;
+	bottom: 9px;
+	transform: translateX(4px);
+  }
+  
+  .feather-sun {
+	opacity: 1;
+	right: 10px;
+	bottom: 9px;
+	transform: translateX(0px);
+  }
+  
+  input:checked + .slider .feather-moon {
+	opacity: 1;
+	transform: translateX(0);
+  }
+  
+  input:checked + .slider .feather-sun {
+	opacity: 0;
+	transform: translateX(-4px);
+  }
