@@ -2,6 +2,9 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { Image } from 'astro:assets';
+import laravel from '/public/image/download-removebg-preview.png';
+import goku from '/public/image/goku.png';
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
@@ -38,7 +41,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 					</ul>
 				</div>
 				<div>
-					<img src="/public/image/download-removebg-preview.png" />
+					<Image src={laravel} alt="A description of my image." />
 				</div>
 				
 			</div>
@@ -89,7 +92,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 		<p> So , do you want a be expert laravel developer?</p>
 		<p> take it this course</p>
-		<img src="/public/image/goku.png" />
+		<Image src={goku} alt="goku"/>
 		</main>
 
 		
