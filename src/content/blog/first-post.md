@@ -8,7 +8,7 @@ heroImage: '../../public/image/download-removebg-preview.png'
  <i>Kerangka kerja</i> atau <i>tools</i> yang digunakan untuk mempercepat dalam proses pengembangan suatu aplikasi
 
 Ilustrasi :
-<img src="../../../public/image/ilustrasi_framework.jpg">
+![Alt text](image-7.png)
 
 Dengan adanya <i>framework</i> kita tidak perlu membangun aplikasi dari <i>scratch</i> kita hanya perlu mempelajari struktur dari framework tersebut.
 <hr style="border-top:1px solid #ccc">
@@ -45,8 +45,7 @@ Pastikan kalian memiliki PHP dan Composer yang sudah terinstall
 
 Untuk install composer bisa klik link dibawah ini :<br>
 https://getcomposer.org/
-
-<img src="../../../public/image/composer.png">
+![Alt text](image-6.png)
 
 Note:
 ```
