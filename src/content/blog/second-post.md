@@ -306,6 +306,20 @@ Penjelasan:
 - @yield('content'): fungsi pada blade yang digunakan untuk menghubungkan bagian konten pada fungsi section di halaman lain
 - asset : fungsi pada blade yang digunakan untuk mengakses folder public pada laravel dimana dalam folder public berisi image,css,js file
 
+## footer.blade.php
+```php
+
+<footer class="mt-3">
+    <div class="row">
+        <div class="col-md-12">
+            <p class="text-center">
+                Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+            </p>
+        </div>
+
+</footer>
+```
+
 ### View Blog
 Buat folder blog pada view dan buat file <a style="color:red">index.blade.php </a> yang berisi main atau kontent utama blog kita.
 
