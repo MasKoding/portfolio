@@ -1,3 +1,9 @@
+---
+title: 'Inertia'
+description: 'Inertia '
+pubDate: 'Jul 22 2022'
+heroImage: '/blog-placeholder-2.jpg'
+---
 ## Inertia Js
 
 Inertia merupakan suatu teknologi  untuk membangun single-page apps secara modern tanpa menggunakan API
